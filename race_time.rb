@@ -1,5 +1,6 @@
 
-puts lineup
+
+
 
 # start game
 # draw race track, finish line
@@ -9,76 +10,45 @@ puts lineup
 
 #win code - winners circle
 
-# _______________________________________
-# 									   |
-# 									   |	
-# _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _|
-# 									   |
-# 									   |
-# _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _| 
-# 									   |
-# 									   |
-# _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _| 
-# 									   |
-# 									   |
-# _______________________________________|
-
-
-# move= gets.chomp
 # move= rand (1 .. 10)
 
 class Horse
 
-	attr_accessor:name
-	attr_accessor:breed
-	attr_accessor:age
-	attr_accessor:hand_height
-	attr_accessor:record
-	attr_accessor:icon
-	attr_accessor:@@lineup
-
-	end	
-		def initialize
-			@name: "Elvis"
-			@breed: "Arbaian"
-			@age: "27"
-			@hand_height: "9"
-			@record: "0-20"
-			@@lineup = []
-		end	
+	attr_accessor :name
+	attr_accessor :breed
+	attr_accessor :icon
+	@@display_all_horses = [ ]
 	
-
-	lineup = Horse.new
-	Penny.name = "Pretty Penny"
-	Penny.breed = "Thoroughbred"
-	Penny.age = "7"
-	Penny.hand_height= "12"
-	Penny.record = "12-3"
-	Penny.icon = "PP `/--/%"
-
-	lineup = Horse.new
-	Melly.name: "Smelly Melly"
-	Melly.breed: "Quarter Horse"
-	Melly.age: "9"
-	Melly.hand_height: "8"
-	Melly.record: "7-9"
-	Melly.icon: "SM `/--/%"
-
-	lineup = Horse.new	
-	Karl.name: "Krazy Karl"
-	Karl.breed: "Percheron"
-	Karl.age: "4"
-	Karl.hand_height: "19"
-	Karl.record: "3-7"
-	Karl.icon: "KK `/--/%"
-
-	lineup = Horse.new
-	BNM.name: "Bangers and Mash"
-	BNM.breed: "Mule"
-	BNM.age: "12"
-	BNM.hand_height: "12"
-	BNW.record: "0-12"
-	BMW.icon: "BandM `/--/%"
+	def initialize
+		self.name = "Elvis"
+		self.breed = "Arbaian"
+		self.icon = "|^^| `/--/%"
+		Horse.display_all_horses.push(self)
+	end	
+		
+	def self.display_all_horses 
+		"#{self.name}, #{self.breed}, #{self.icon}"
+	end
 end
 
+penny = Horse.new
+penny.name = "Pretty Penny"
+penny.breed = "Thoroughbred"
+penny.icon = "PP `/--/%"
 
+melly = Horse.new
+melly.name = "Smelly Melly"
+melly.breed = "Quarter Horse"
+melly.icon = "SM `/--/%"
+
+karl = Horse.new	
+karl.name = "Krazy Karl"
+karl.breed = "Percheron"
+karl.icon = "KK `/--/%"
+
+bnm = Horse.new
+bnm.name = "Bangers and Mash"
+bnm.breed = "Mule"
+bnm.icon = "BandM `/--/%"
+
+p Horse.display_all_horses
