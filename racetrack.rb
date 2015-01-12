@@ -56,6 +56,8 @@ class RaceTrack
 				puts "hit enter again to continue race"
 			else 
 				puts "We have a winner"
+			end
+		end		
 	end	
 
 				

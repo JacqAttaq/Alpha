@@ -14,6 +14,15 @@ deck = {
 # game over - cards <=21 you win
 					#>21 you lose
 
-deal two cards - figure out how to pick two out of array
+# deal two cards - figure out how to pick two out of array
 
-array methods shuffle, select, take, sample
+# array methods shuffle, select, take, sample
+
+# empty array for user cards - suffle, push from deck, pop to user
+#find out inject. can use break to break out of loop and continue on code
+# inject takes every element in array and sums it up
+# flatten array? if you pop or sample more than one option at once it will return a two dimensional array
+# dont need card type, just number array
+# irb - interactive ruby - test code, see what things do |variable|
+	
+end

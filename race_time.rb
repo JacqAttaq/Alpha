@@ -27,7 +27,7 @@ class Horse
 	end	
 		
 	def self.display_all_horses 
-		"#{self.name}, #{self.breed}, #{self.icon}"
+		"#{self.name} #{self.breed} #{self.icon}"
 	end
 end
 
